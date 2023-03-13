@@ -1,31 +1,34 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Enemies_NPCs
 {
     /// <summary>
     /// Default class for the enemy; all enemy types share these properties and functions
     /// </summary>
-    public class Enemy : MonoBehaviour
+    [RequireComponent(typeof(Rigidbody2D))]
+    [RequireComponent(typeof(Collider2D))]
+    [RequireComponent(typeof(Animator))]
+    public class Enemy : Damager
     {
         private ETypes _enemyType;
         // [0] should be current health, [1] should be max health
-        private int[] _healthMinMax;
-        [FormerlySerializedAs("_attackDamage")] public float attackDamage;
+        public int[] healthMinMax;
+        private float _attackDamage;
         private bool _isDead;
         public float attackCooldown;
-        public Collider2D cd2D;
-        public Rigidbody2D rb2D;
-        public Animator anim;
-        public Animation deadAnimation;
+        private Collider2D _cd2D;
+        private Rigidbody2D _rb2D;
+        private Animator _anim;
+        public Animation deathAnimation;
         public Animation attackAnimation;
 
         private void Start()
         {
-            rb2D = GetComponent<Rigidbody2D>();
-            cd2D = GetComponent<Collider2D>();
-            anim = GetComponent<Animator>();
+            _rb2D = GetComponent<Rigidbody2D>();
+            _cd2D = GetComponent<Collider2D>();
+            _anim = GetComponent<Animator>();
+            _attackDamage = GetComponent<Damager>().damage;
         }
 
         /// <summary>
@@ -37,26 +40,26 @@ namespace Enemies_NPCs
         {
             if (other.CompareTag($"EnemyDamager") | other.CompareTag($"GeneralDamager"))
             {
-                float damage = other.transform.GetComponent<Damager>().GetDamage();
-                TakeDamage(damage);
+                float dmg = other.transform.GetComponent<Damager>().GetDamage();
+                TakeDamage(dmg);
             }
         }
 
         private void TakeDamage(float dmg)
         {
             // Take the damage amount off our current health
-            _healthMinMax[0] = (int)Mathf.Clamp(_healthMinMax[0] - dmg, 0, _healthMinMax[1]);
+            healthMinMax[0] = (int)Mathf.Clamp(healthMinMax[0] - dmg, 0, healthMinMax[1]);
 
-            if (_healthMinMax[0] <= 0)
+            if (healthMinMax[0] <= 0)
             {
                 _isDead = true;
             }
 
             if (_isDead)
             {
-                deadAnimation.Play();
-                cd2D.enabled = false; // Let's disable this to not get any bugs with enemies mass blocking the way
-                rb2D.Sleep();
+                deathAnimation.Play();
+                _cd2D.enabled = false; // Let's disable this to not get any bugs with enemies mass blocking the way
+                _rb2D.Sleep();
             }
         }
 
@@ -67,7 +70,7 @@ namespace Enemies_NPCs
         /// <returns>Cooldown until it can attack again</returns>
         internal IEnumerator DealDamage()
         {
-            if (attackDamage != 0)
+            if (_attackDamage != 0)
             {
                 attackAnimation.Play();
                 yield return new WaitForSecondsRealtime(attackCooldown);

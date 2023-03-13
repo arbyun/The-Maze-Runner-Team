@@ -19,11 +19,11 @@ namespace Enemies_NPCs
         {
             if (_component == TryGetComponent<Player>(out Player player))
             {
-                damage = player.attackDamage;
+                //damage = player.attackDamage;
             }
             if (_component == TryGetComponent<Enemy>(out Enemy enemy))
             {
-                damage = enemy.attackDamage;
+                //damage = enemy.attackDamage;
             }
         }
 
@@ -42,7 +42,7 @@ namespace Enemies_NPCs
             // If the damager is the player and has a weapon equipped, we add the weapon's dmg to the total
             if (_component == TryGetComponent<Player>(out Player player))
             {
-                if (player.hasWeapon)
+                if (player.HasWeapon)
                 {
                     GameObject weaponPrefab = Player.GetWeapon();
                     Weapon weapon = weaponPrefab.GetComponent<Weapon>();

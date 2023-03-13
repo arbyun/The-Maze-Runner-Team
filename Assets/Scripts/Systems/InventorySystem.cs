@@ -37,12 +37,12 @@ namespace Systems
             }
         }
 
-        public void UnequipWeapon()
+        public static void UnequipWeapon()
         {
             EquippedWeapon = null;
         }
 
-        public void AddItem(GameObject item)
+        public static void AddItem(GameObject item)
         {
             _items.Add(item);
         }
