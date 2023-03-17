@@ -33,14 +33,14 @@ namespace Enemies_NPCs.Enemy_Behaviour
             float distance = Vector3.Distance(transform.position, _playerT.position);
             
             // If player is in our vision range, start following them
-            if (distance < _visionRange)
+            if (distance <= _visionRange)
             {
                 HasSeenPlayer();
                 _isFollowing = true;
             }
 
             // If player is in our attack range, attack
-            if (distance < _attackRange)
+            if (distance <= _attackRange)
             {
                 if (_isAttacking)
                 {
