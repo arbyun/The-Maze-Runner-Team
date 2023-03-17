@@ -12,25 +12,27 @@ namespace Enemies_NPCs
         private bool _component;
 
         /// <summary>
-        /// If the damager is a player or enemy, replace the damage serialised value for the ones
+        /// DISCONTINUED: If the damager is a player or enemy, replace the damage serialised value for the ones
         /// set in their own script
         /// </summary>
         private void OnEnable()
         {
-            if (_component == TryGetComponent<Player>(out Player player))
-            {
+            //if (_component == TryGetComponent<Player>(out Player player))
+            //{
                 //damage = player.attackDamage;
-            }
-            if (_component == TryGetComponent<Enemy>(out Enemy enemy))
-            {
+            //}
+            //if (_component == TryGetComponent<Enemy>(out Enemy enemy))
+            //{
                 //damage = enemy.attackDamage;
-            }
+            //}
         }
 
         /// <summary>
         /// Useful and very simple way of communicating dmg between objects
         /// </summary>
         /// <returns>Damage dealt by the damager</returns>
+        ///
+        /// I might delete this since it's kind of obsolete for now and could be substituted by CalculateDamage()
         public float GetDamage()
         {
             damage = CalculateDamage();
