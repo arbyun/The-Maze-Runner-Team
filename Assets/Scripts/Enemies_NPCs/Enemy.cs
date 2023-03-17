@@ -58,7 +58,7 @@ namespace Enemies_NPCs
             if (_isDead)
             {
                 deathAnimation.Play();
-                _cd2D.enabled = false; // Let's disable this to not get any bugs with enemies mass blocking the way
+                _cd2D.enabled = false; // Let's disable this to not get any bugs with enemy corpses mass blocking the way
                 _rb2D.Sleep();
             }
         }
