@@ -1,8 +1,8 @@
-using Systems.Mechanics;
+using GameSystems.Mechanics;
 using UnityEngine;
 using Utilities;
 
-namespace Systems
+namespace GameSystems
 {
     public class MovementMechanics : MonoBehaviour
     {

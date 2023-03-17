@@ -1,9 +1,8 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using UnityEngine;
 using Utilities;
 
-namespace Systems
+namespace GameSystems
 {
     public class Speaker : MonoBehaviour
     {

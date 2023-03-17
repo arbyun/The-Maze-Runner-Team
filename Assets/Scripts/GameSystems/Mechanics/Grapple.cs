@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Systems.Mechanics
+namespace GameSystems.Mechanics
 {
     public class Grapple : MonoBehaviour
     {

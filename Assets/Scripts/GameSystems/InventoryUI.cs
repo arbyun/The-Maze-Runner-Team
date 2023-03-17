@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Systems
+namespace GameSystems
 {
     [RequireComponent(typeof(Collider2D))]
     public class InventoryUI : MonoBehaviour

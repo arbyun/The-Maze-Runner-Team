@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Systems
+namespace GameSystems
 {
     public class Collectible : MonoBehaviour
     {

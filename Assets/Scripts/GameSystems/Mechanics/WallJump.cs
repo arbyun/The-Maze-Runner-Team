@@ -1,12 +1,11 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace Systems.Mechanics
+namespace GameSystems.Mechanics
 {
     public class WallJump : MonoBehaviour
     {
-        private float _gravity = 1.0f;
-        private float _jumpHeight = 15.0f;
+        private const float Gravity = 1.0f;
+        private const float JumpHeight = 15.0f;
         private CharacterController _controller;
         private GameObject _player;
 
@@ -26,7 +25,7 @@ namespace Systems.Mechanics
             }
             else
             {
-                Debug.Log("We need a character controller!");
+                Debug.Log("We might need a character controller!");
             }
 
             var playerScript = _player.GetComponent<Player>();
@@ -45,18 +44,18 @@ namespace Systems.Mechanics
 
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
-                    _yVelocity = _jumpHeight;
+                    _yVelocity = JumpHeight;
                 }
             }
             else if (_controller.isGrounded)
             {
                 if (Input.GetKeyDown(KeyCode.Space) && _canWallJump)
                 {
-                    _yVelocity = _jumpHeight;
+                    _yVelocity = JumpHeight;
                     _speed = _wallSurfNormal * _movementSpeed;
                 }
 
-                _yVelocity -= _gravity;
+                _yVelocity -= Gravity;
             }
 
             _speed.y = _yVelocity;
