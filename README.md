@@ -1,4 +1,3 @@
-# The-Maze-Runner-Team
 Team platformer/sidescroller project for University Lusófona
 
 # The Maze Runner: Gladers' Escape
