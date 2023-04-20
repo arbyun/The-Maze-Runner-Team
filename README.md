@@ -34,5 +34,5 @@ The game also features a range of unique mechanics, including the ability to cli
 
 # Open Issues
 
-- [ ] #1
+- [ ] Rewrite movement scripts https://github.com/arbyun/The-Maze-Runner-Team/issues/1
 - [ ] Remove malpractices from the code
