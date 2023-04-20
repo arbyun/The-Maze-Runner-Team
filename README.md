@@ -31,3 +31,8 @@ The game also features a range of unique mechanics, including the ability to cli
 ## Art Style and Graphics
 
 *The Maze Runner: Gladers' Escape* is drawn in a charming pixel art style and developed in the Unity Engine. The game's visual style is inspired by The Maze Runner movies' looks and is designed to appeal to fans of the series.
+
+# Open Issues
+
+- [] #1
+- [] Remove malpractices from the code
