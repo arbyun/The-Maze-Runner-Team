@@ -11,10 +11,14 @@ namespace GameSystems
             throw new NotImplementedException();
         }
 
+        /// <summary> Called when the player clicks on a weapon in their inventory.        
+        /// It will equip that weapon and unequip any other weapons currently equipped.</summary>
+        /// <param name="weapon"> /// </param>
+        /// <returns> The weapon that is clicked on.</returns>
         public void OnWeaponClicked(GameObject weapon)
         {
             InventorySystem inventory = GetComponent<InventorySystem>();
-            inventory.EquipWeapon(weapon);
+            InventorySystem.EquipWeapon(weapon);
         }
     }
 }

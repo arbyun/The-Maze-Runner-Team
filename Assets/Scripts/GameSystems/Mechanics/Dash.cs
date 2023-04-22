@@ -14,10 +14,12 @@ namespace GameSystems.Mechanics
         void Start()
         {
             _player = GameObject.FindGameObjectWithTag("Player");
-            var playerScript = _player.GetComponent<Player>();
-            _speed = playerScript.speed;
+            _speed = Player.Speed;
         }
 
+        /// <summary> Checks for input, and if the player has pressed the dash key, it will increase their speed
+        /// by 50% for 2 seconds. After that time window has passed, it will start a coroutine to decrease their
+        /// speed back to normal.</summary>
         private void Update()
         {
             float horizontalIn = Input.GetAxis("Horizontal");
@@ -43,6 +45,8 @@ namespace GameSystems.Mechanics
             }
         }
 
+        /// <summary> Coroutine that returns the player's speed to normal after 1.2 seconds.</summary>
+        /// <returns> A float</returns>
         private IEnumerator AfterDash()
         {
             // Let's return to the og speed

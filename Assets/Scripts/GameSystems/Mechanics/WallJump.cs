@@ -16,6 +16,8 @@ namespace GameSystems.Mechanics
 
         private float _movementSpeed;
 
+        /// <summary> Finds the player object and assigns it to a variable, then checks if that object has a
+        /// CharacterController component attached to it. If not, we log an error message in the console.</summary>
         private void Start()
         {
             _player = GameObject.FindGameObjectWithTag("Player");
@@ -28,10 +30,10 @@ namespace GameSystems.Mechanics
                 Debug.Log("We might need a character controller!");
             }
 
-            var playerScript = _player.GetComponent<Player>();
-            _movementSpeed = playerScript.speed;
+            _movementSpeed = Player.Speed;
         }
 
+        /// <summary> Handles the player's movement and jumping.</summary>
         private void Update()
         {
             float horizontalInp = Input.GetAxisRaw("Horizontal");
@@ -62,6 +64,11 @@ namespace GameSystems.Mechanics
             _controller.Move(_speed * Time.deltaTime);
         }
 
+        /// <summary> Called when the controller hits a collider while performing a wall jump</summary>
+        /// <param name="hit"> /// the controllercolliderhit parameter is used to get the normal of the surface
+        /// that was hit. This allows us to know which direction we should be jumping off of it in. 
+        /// </param>
+        /// <returns> The normal of the wall that the player is colliding with.</returns>
         private void OnControllerColliderHit(ControllerColliderHit hit)
         {
             if (_controller.isGrounded == false && hit.transform.CompareTag($"Wall"))

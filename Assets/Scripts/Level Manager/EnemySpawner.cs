@@ -18,6 +18,10 @@ namespace Level_Manager
             SpawnEnemies();
         }
 
+        /// <summary> Responsible for spawning enemies in the scene.        
+        /// It uses a for loop to generate as many enemies as dictated by the level data in the EnemyManager.cs
+        /// </summary>
+        /// <returns> An array of GameObjects</returns>
         private void SpawnEnemies()
         {
             // for loop to generate as many enemies as dictated by the level data in the EnemyManager.cs
@@ -37,7 +41,11 @@ namespace Level_Manager
         
         /// <summary>
         /// We want to try to spawn an equal amount of enemies per type; this is an attempt at it
-        /// </summary>
+        /// Chooses a random enemy type to spawn. It does this by first calculating the average number of spawns for
+        /// each enemy type, then it calculates the chance that each enemy will be spawned based on how many times
+        /// they have been spawned already. The more an enemy has been spawned, the less likely it is to be chosen
+        /// again.</summary>
+        /// <returns> A random GameObject from the TypesToSpawn array</returns>
         private GameObject RandomEnemyType()
         {
             int totalSpawns = 0;

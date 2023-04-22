@@ -31,8 +31,8 @@ namespace Utilities
 
         /// <summary>
         /// Made a mask field in the editor to more easily select the layer the g.o. will
-        /// change to
-        /// </summary>
+        /// change to. The function is called when the object is selected in the editor.</summary> 
+        /// <returns> A layer mask.</returns>
         private void OnDrawGizmosSelected()
         {
             // created array of strings that will hold the layer names
@@ -48,17 +48,16 @@ namespace Utilities
             layerMask = EditorGUILayout.MaskField("Layer", layerMask.value, layerNames);
         }
 
+        /// <summary> Checks if the timer has been reached, and if so, changes the layer of gameObjectToChange to
+        /// layerMask.</summary>
         private void Update()
         {
-            if (useTimer)
+            if (useTimer && Time.time > timer)
             {
-                if (Time.time > timer)
-                {
-                    gameObjectToChange.layer = layerMask;
-                }
+                gameObjectToChange.layer = layerMask;
             }
         }
-
+        
         private void OnTriggerEnter(Collider other)
         {
             if (useGameObject && other.gameObject == gameObj)

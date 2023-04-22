@@ -11,6 +11,9 @@ namespace Utilities
 
         private readonly GUIContent _mNameContent = new GUIContent ("New Level Name");
     
+        /// <summary> Creates the LevelCreator window.        
+        /// It also sets the name of the level to Level_X; by default.</summary>
+        /// <returns> A window of type LevelCreator.</returns>
         [MenuItem("Maze Runner Team/New Level...", priority = 100)]
         private static void Init ()
         {
@@ -19,6 +22,10 @@ namespace Utilities
             window._mLevelName = "Level_X";
         }
 
+        /// <summary> The OnGUI function is called every time the editor window is updated.        
+        /// This function will be used to create a text field for the user to enter their level name, and a button
+        /// that will check if the scene exists and then create it.</summary>
+        /// <returns> A boolean value.</returns>
         private void OnGUI ()
         {
             _mLevelName = EditorGUILayout.TextField (_mNameContent, _mLevelName);
@@ -28,6 +35,11 @@ namespace Utilities
         }
 
         // ReSharper disable Unity.PerformanceAnalysis
+        /// <summary> The CheckAndCreateScene function checks to see if the scene is dirty, and if it is, asks the user        
+        /// whether they want to save their changes. If they do not want to save their changes, then nothing happens.
+        /// If they do want to save their changes or there are no unsaved changes in the current scene, then a new 
+        /// scene will be created.</summary>
+        /// <returns> A boolean value of true or false.</returns>
         private void CheckAndCreateScene()
         {
             if (EditorApplication.isPlaying)
@@ -65,6 +77,11 @@ namespace Utilities
             CreateScene ();
         }
 
+        /// <summary> The CreateScene function creates a new scene based on the template scene.        
+        /// It first searches for the template scene in the project, and if it finds it, copies
+        /// that to a new location with the name specified by _mLevelName. Then it adds this 
+        /// newly created level to build settings.</summary>
+        /// <returns> A string array.</returns>
         private void CreateScene ()
         {
             string[] result = AssetDatabase.FindAssets("_TemplateLevel");
@@ -88,6 +105,12 @@ namespace Utilities
             }
         }
 
+
+        /// <summary> The AddSceneToBuildSettings function adds a scene to the build settings.</summary>        
+        /// <param name="scene"> /// the scene to add to the build settings.
+        /// </param>
+        /// <returns> A boolean value. if the scene is successfully added to the build settings, it returns true;
+        /// otherwise, it returns false.</returns>
         private static void AddSceneToBuildSettings (Scene scene)
         {
             EditorBuildSettingsScene[] buildScenes = EditorBuildSettings.scenes;
@@ -101,6 +124,12 @@ namespace Utilities
             EditorBuildSettings.scenes = newBuildScenes;
         }
 
+        
+        /// <summary> The InstantiatePrefab function instantiates a prefab from the specified folder path and with the        
+        /// specified name.  If no prefab is found, an error message is logged to the console.</summary>
+        /// <param name="folderPath"> The path to the folder containing the prefab.</param>
+        /// <param name="prefabName"> The name of the prefab to be instantiated.</param>
+        /// <returns> A GameObject instance.</returns>
         protected GameObject InstantiatePrefab (string folderPath, string prefabName)
         {
             GameObject instance = null;

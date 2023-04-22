@@ -40,6 +40,8 @@ namespace GameSystems
             }
         }
 
+        /// <summary> Populates the dialogue dictionary with all of the lines in this object's list of dialogue lines,
+        /// also it checks if any conditions are required for those lines to be displayed.</summary>
         private void Start()
         {
             foreach (var t in dialogueLines)

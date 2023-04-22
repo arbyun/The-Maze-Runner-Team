@@ -6,6 +6,8 @@ namespace GameSystems
     {
         private int _quantity;
 
+        /// <summary> Adds the item to the inventory system.</summary>
+        /// <returns> The gameobject</returns>
         private void AddToInventory()
         {
             _quantity++;
@@ -16,6 +18,7 @@ namespace GameSystems
             }
         }
 
+        /// <summary> Pick up collectible when you collide with it </summary>
         private void OnTriggerEnter(Collider other)
         {
             if (other.CompareTag("Player"))
