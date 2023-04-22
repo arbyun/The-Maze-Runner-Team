@@ -10,7 +10,7 @@ jobs:
       fail-fast: false
       matrix:
         projectPath:
-          - The-Maze-Runner-Team
+          - The-Maze-Runner-Team/tree/master
         testMode:
           - playmode
           - editmode
