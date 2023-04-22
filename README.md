@@ -1,13 +1,27 @@
+
+<div align="center">
+
+![imagem_2023-04-22_133155712-removebg-preview](https://user-images.githubusercontent.com/115217686/233784994-613da55c-ca48-4cac-9f9b-23f432c44958.png)
+
+![Unity Version](https://img.shields.io/badge/Unity-2021.3.16f1-blue)
+[![Made with Unity](https://img.shields.io/badge/Made%20with-Unity-57b9d3.svg?style=flat&logo=unity)](https://unity3d.com)
+![Progress](https://progress-bar.dev/21/?title=progress)
+
 *Team platformer/sidescroller project for University Lusófona*
 
+</div>
+
+
 # The Maze Runner: Gladers' Escape
+[![Trello](https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=Trello&logoColor=white)](https://trello.com/invite/b/LtOWMNCf/ATTIc53ddaecb1972ca050787f5fc5db86ff393D35AB/maze-runner-djd1)
+![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white)
+![Rider](https://img.shields.io/badge/Rider-000000.svg?style=for-the-badge&logo=Rider&logoColor=white&color=black&labelColor=crimson)
 
 ## Game Overview
 
 The Maze Runner: Gladers' Escape is a university project/game based on The Maze Runner franchise, specifically the first movie. It is a platformer sidescrolling game with a focus on movement fluidity that allows players to play as different **Gladers** (survivors that live in the maze) as they explore each "level" (subsections of the maze) and complete various challenges.
 
 ### Genre
-
 Platformer/Sidescroller
 
 ### Platform
