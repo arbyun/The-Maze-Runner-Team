@@ -5,6 +5,8 @@
 
 ![Unity Version](https://img.shields.io/badge/Unity-2021.3.16f1-blue)
 [![Made with Unity](https://img.shields.io/badge/Made%20with-Unity-57b9d3.svg?style=flat&logo=unity)](https://unity3d.com)
+[![CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by-nc-sa/4.0/)
+
 ![Progress](https://progress-bar.dev/21/?title=progress)
 
 *Team platformer/sidescroller project for University Lusófona*
@@ -50,3 +52,12 @@ The game also features a range of unique mechanics, including the ability to cli
 
 - [x] Rewrite movement scripts https://github.com/arbyun/The-Maze-Runner-Team/issues/1
 - [ ] Remove malpractices from the code
+
+
+<div align="center">
+
+[![CC BY-NC-SA 4.0][cc-by-nc-sa-image]][cc-by-nc-sa]
+
+[cc-by-nc-sa]: http://creativecommons.org/licenses/by-nc-sa/4.0/
+[cc-by-nc-sa-image]: https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png
+</div>
