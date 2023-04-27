@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections.Generic;
+using UnityEngine;
 
 namespace GameSystems.Inventory
 {
@@ -6,25 +8,12 @@ namespace GameSystems.Inventory
     public class Item : ScriptableObject
     {
         public bool stackable;
+        public int Count;
         public string itemName;
         public Sprite itemIcon;
         public ItemType itemType;
-        public float id;
-
-        public void Use()
-        {
-            switch (itemType)
-            {
-                case ItemType.Weapon:
-                    //GetUseWeapon();
-                    break;
-                case ItemType.Buff:
-                    //Add();
-                    break;
-                case ItemType.Consumable:
-                    //Consume();
-                    break;
-            }
-        }
+        public Guid id = Guid.NewGuid();
+        public List<ItemTags> tags = new List<ItemTags>();
+        public float quality;
     }
 }

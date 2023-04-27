@@ -1,4 +1,4 @@
-﻿using Enemies_NPCs.Enemy_Behaviour;
+﻿/*using Enemies_NPCs.Enemy_Behaviour;
 using GameSystems;
 using UnityEngine;
 using Utilities;
@@ -22,15 +22,14 @@ public class Weapon : MonoBehaviour
     private static WeaponType _type;
     internal readonly bool HasChildren = (_type == WeaponType.Ranged);
 
-    [ConditionalHide("_hasChildren", true)]
     public GameObject children;
 
-    private string Name { get; set; }
+    private string name { get; set; }
 
     private string Desc { get; set; }
     
     /// <summary> Constructor for the Weapon class. It takes in two parameters, name and type, and sets the
-    /// Name and Desc properties to values from an ItemData object.</summary>
+    /// name and Desc properties to values from an ItemData object.</summary>
     /// <param name="name"> The name of the item.</param>
     /// <param name="type"> /// the type of weapon, used to determine the damage and range. </param>
     /// <returns> A weapon object</returns>
@@ -38,7 +37,7 @@ public class Weapon : MonoBehaviour
     {
         _type = type;
         ItemData data = Resources.Load<ItemData>(@"Inventory\" + name);
-        Name = data.nameKey;
+        name = data.nameKey;
         Desc = data.descriptionKey;
     }
     
@@ -48,4 +47,4 @@ public class Weapon : MonoBehaviour
     {
         firing = GetComponent<Animation>();
     }
-}
+}*/

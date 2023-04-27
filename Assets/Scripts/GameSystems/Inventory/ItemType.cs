@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-namespace GameSystems
+﻿namespace GameSystems.Inventory
 {
     public enum ItemType
     {

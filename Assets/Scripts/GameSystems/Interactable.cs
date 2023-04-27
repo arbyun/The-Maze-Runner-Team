@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿/*using UnityEngine;
 
 namespace GameSystems
 {
@@ -48,7 +48,7 @@ namespace GameSystems
 
             if (i <= 2f && Input.GetKeyDown(_interactKey))
             {
-                DialogueSystem.GetDialogueString(gameObject);
+                //DialogueSystem.GetDialogueString(gameObject);
             }
         }
 
@@ -68,4 +68,4 @@ namespace GameSystems
             return bullet.TryGetComponent<Weapon>(out Weapon weapon);
         }
     }
-}
+}*/

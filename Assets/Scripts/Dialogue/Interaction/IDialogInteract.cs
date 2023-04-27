@@ -1,4 +1,4 @@
-﻿namespace Utilities.Interaction
+﻿namespace Dialogue.Interaction
 {
     public interface IDialogInteract
     {

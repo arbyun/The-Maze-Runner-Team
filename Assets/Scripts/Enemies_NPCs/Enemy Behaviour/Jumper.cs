@@ -15,5 +15,20 @@ namespace Enemies_NPCs.Enemy_Behaviour
         {
         
         }
+
+        public override float BehaveInterval()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public override void Hurt(int damage)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        protected override void Die()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

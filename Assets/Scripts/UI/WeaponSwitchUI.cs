@@ -1,4 +1,4 @@
-﻿using GameSystems;
+﻿/*using GameSystems;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -61,4 +61,4 @@ namespace UI
             InventorySystem.OffHandWeapon(_currentWeapon);
         }
     }
-}
+}*/

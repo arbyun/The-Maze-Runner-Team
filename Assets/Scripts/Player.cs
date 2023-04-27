@@ -1,4 +1,4 @@
-﻿using System;
+﻿/*using System;
 using Enemies_NPCs;
 using GameSystems;
 using UI;
@@ -12,11 +12,11 @@ using Utilities;
 public class Player : Damager
 {
     internal bool HasWeapon;
-    public bool tutorialDone;
+    public bool TutorialDone;
     private bool _isDead;
     
-    public int[] healthMinMax;
-    public float attackCooldown;
+    public int[] HealthMinMax;
+    public float AttackCooldown;
     public static float Speed;
     
     private Collider2D _cd2D;
@@ -25,7 +25,7 @@ public class Player : Damager
     private Configs _configs;
     private PlayerControls _controls;
     
-    /* ---------------------------------------------------- */
+    /* ---------------------------------------------------- 
     #region Player Enums
 
     public enum Mode
@@ -52,7 +52,7 @@ public class Player : Damager
 
     #endregion
 
-    /* --------------------------------------------------- */
+    /* --------------------------------------------------- 
     #region Health System
 
     private static int _health;
@@ -68,7 +68,7 @@ public class Player : Damager
     
     #endregion
     
-    /* --------------------------------------------------- */
+    /* --------------------------------------------------- 
     #region Movement Vectors
     public Vector2 Position => transform.position; 
     private Vector2 _hazardRespawnPoint = new Vector2(0, 0);
@@ -76,12 +76,12 @@ public class Player : Damager
 
     #endregion
     
-    /* --------------------------------------------------- */
+    /* --------------------------------------------------- 
     /// <summary> Static function that returns the singleton instance of the Player class.</summary>    
     /// <returns> A new instance of the player class</returns>
     private Player()
     {
-        MaxHealth = healthMinMax[1];
+        MaxHealth = HealthMinMax[1];
     }
 
     /// <summary> Used to initialize any variables or game state before the game starts.</summary>    
@@ -124,7 +124,7 @@ public class Player : Damager
         
         _controls.Enable();
         
-        if (!tutorialDone)
+        if (!TutorialDone)
         { 
             InventorySystem.AddItem(GameObject.Find("TutorialGun"));
             InventorySystem.AddItem(GameObject.Find("TutorialKnife"));
@@ -162,7 +162,7 @@ public class Player : Damager
     private void TakeDamage(float dmg)
     {
         // Take the damage amount off our current health
-        healthMinMax[0] = (int)Mathf.Clamp(healthMinMax[0] - dmg, 0, healthMinMax[1]);
+        HealthMinMax[0] = (int)Mathf.Clamp(HealthMinMax[0] - dmg, 0, HealthMinMax[1]);
 
         if (_health <= 0)
             Respawn();
@@ -180,4 +180,4 @@ public class Player : Damager
         Speed = 10;
     }
         
-}
+}*/

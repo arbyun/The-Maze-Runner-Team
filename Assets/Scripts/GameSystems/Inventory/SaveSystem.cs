@@ -9,16 +9,19 @@ namespace GameSystems.Inventory
     {
         // Place all items in the game by their ID order in this list(ID starts at 0)
         public List<Item> itemLibrary = new();
+        public Inventory inventory;
 
         // The string that is use to store the current Inventory Data when SaveInventory is called
         private string _inventoryString = "";
 
+        public GameData.Items itemList;
+
         public void TransformDataToString()
         {
             // For each item the script saves the ID and quantity of it
-            foreach (var item in Inventory.Instance.itemList)
+            foreach (var item in itemList.OwnedItems)
                 _inventoryString = _inventoryString + item.id + ":" +
-                                  Inventory.Instance.quantityList[Inventory.Instance.itemList.IndexOf(item)] + "/";
+                                  item.Count + "/";
         }
 
         public void SaveInventory()
@@ -59,13 +62,12 @@ namespace GameSystems.Inventory
             ReadInventoryData(data.inventoryString);
 
             // Update UI after Load
-            Inventory.Instance.UpdateInventoryUI();
+            //Inventory.Instance.UpdateInventoryUI();
         }
 
         public void ReadInventoryData(string data)
         {
-            Inventory.Instance.itemList.Clear();
-            Inventory.Instance.quantityList.Clear();
+            inventory.data.OwnedItems.Clear();
 
             var splitData = data.Split(char.Parse("/"));
 
@@ -75,8 +77,7 @@ namespace GameSystems.Inventory
 
                 if (splitID.Length >= 2)
                 {
-                    Inventory.Instance.itemList.Add(itemLibrary[int.Parse(splitID[0])]);
-                    Inventory.Instance.quantityList.Add(int.Parse(splitID[1]));
+                    inventory.data.OwnedItems.Add(itemLibrary[int.Parse(splitID[0])]);
                 }
             }
         }

@@ -1,6 +1,6 @@
 using Player;
 using UnityEngine;
-using Utilities;
+using Dialogue;
 
 namespace Camera
 {
@@ -42,16 +42,16 @@ namespace Camera
         
         private void Start()
         {
-            DialogManager.Instance.OnDialogStart += HandleDialogStart;
-            DialogManager.Instance.OnDialogEnds += HandleDialogEnd;
-            DialogManager.Instance.OnDialogCancelled += HandleDialogEnd;
+            DialogueManager.Instance.OnDialogStart += HandleDialogStart;
+            DialogueManager.Instance.OnDialogEnds += HandleDialogEnd;
+            DialogueManager.Instance.OnDialogCancelled += HandleDialogEnd;
         }
 
         private void OnDisable()
         {
-            DialogManager.Instance.OnDialogStart -= HandleDialogStart;
-            DialogManager.Instance.OnDialogEnds -= HandleDialogEnd;
-            DialogManager.Instance.OnDialogCancelled -= HandleDialogEnd;
+            DialogueManager.Instance.OnDialogStart -= HandleDialogStart;
+            DialogueManager.Instance.OnDialogEnds -= HandleDialogEnd;
+            DialogueManager.Instance.OnDialogCancelled -= HandleDialogEnd;
         }
 
         /// <summary> This section is responsible for smoothly zooming and moving the camera towards a target
