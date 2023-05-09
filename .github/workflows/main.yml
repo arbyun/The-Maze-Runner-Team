@@ -43,7 +43,7 @@ jobs:
           restore-keys: |
             Library-
 
-	# Private repo set up
+      # Private repo set up
       - name: 'Add GitHub to the SSH known hosts file'
         run: |
             mkdir -p -m 0700 /home/runner/.ssh
