@@ -1,51 +1,92 @@
-name: Test the project
+name: Actions
 
 on: [push, pull_request]
 
 jobs:
-  testAllModes:
-    name: Test in ${{ matrix.testMode }}
+  build:
+    name: Build project
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
-        projectPath:
-          - ''
-        testMode:
-          - playmode
-          - editmode
+        targetPlatform:
+          - StandaloneWindows # Build a Windows standalone.
+          - StandaloneWindows64 # Build a Windows 64-bit standalone.
+          - WebGL # WebGL.
     steps:
-      - uses: actions/checkout@v2
+      # Checkout (without LFS)
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # Git LFS
+      - name: Create LFS file list
+        run: git lfs ls-files -l | cut -d' ' -f1 | sort > .lfs-assets-id
+
+      - name: Restore LFS cache
+        uses: actions/cache@v2
+        id: lfs-cache
         with:
-          lfs: true
-          ref: build1
-          token: ${{ secrets.PAT_TOKEN }}
-          fetch-depth: 0
-          debug: true
+          path: .git/lfs
+          key: ${{ runner.os }}-lfs-${{ hashFiles('.lfs-assets-id') }}
+
+      - name: Git LFS Pull
+        run: |
+          git lfs pull
+          git add .
+          git reset --hard
+
+      # Cache
       - uses: actions/cache@v2
         with:
-          path: ${{ matrix.projectPath }}/Library
-          key: Library-${{ matrix.projectPath }}
+          path: Library
+          key: Library-${{ matrix.targetPlatform }}
           restore-keys: |
             Library-
-      - uses: game-ci/unity-test-runner@v2
-        id: tests
+
+	# Private repo set up
+      - name: 'Add GitHub to the SSH known hosts file'
+        run: |
+            mkdir -p -m 0700 /home/runner/.ssh
+            curl --silent https://api.github.com/meta  | jq --raw-output '"github.com "+.ssh_keys[]' >> /home/runner/.ssh/known_hosts
+            chmod 600 /home/runner/.ssh/known_hosts
+
+      - name: Accessing private repos
+      - uses: actions/checkout@v2
+      - uses: webfactory/ssh-agent@v0.8.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+      - uses: game-ci/unity-builder@v2
+        with:
+          sshAgent: ${{ env.SSH_AUTH_SOCK }}
+
+      - name: Create .upmconfig.toml UPM authentication file
+        run: |
+            mkdir /home/runner/work/_temp/_github_home
+            cd /home/runner/work/_temp/_github_home
+            echo "[npmAuth.\"https://upm.example.com\"]" >> .upmconfig.toml
+            echo "alwaysAuth = true" >> .upmconfig.toml
+            echo "token = \"${{ secrets.NPM_TOKEN }}\"" >> .upmconfig.toml
+
+      # Test
+      - name: Run tests
+        uses: game-ci/unity-test-runner@v2
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
         with:
-          projectPath: ${{ matrix.projectPath }}
-          testMode: ${{ matrix.testMode }}
-          artifactsPath: ${{ matrix.testMode }}-artifacts
           githubToken: ${{ secrets.GITHUB_TOKEN }}
-          checkName: ${{ matrix.testMode }} Test Results
-          coverageOptions: 'generateAdditionalMetrics;generateHtmlReport;generateBadgeReport;assemblyFilters:+my.assembly.*'
-      - uses: actions/upload-artifact@v2
-        if: always()
+
+      # Build
+      - name: Build project
+        uses: game-ci/unity-builder@v2
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
-          name: Test results for ${{ matrix.testMode }}
-          path: ${{ steps.tests.outputs.artifactsPath }}
+          targetPlatform: ${{ matrix.targetPlatform }}
+
+      # Output
       - uses: actions/upload-artifact@v2
-        if: always()
         with:
-          name: Coverage results for ${{ matrix.testMode }}
-          path: ${{ steps.tests.outputs.coveragePath }}
+          name: Build-${{ matrix.targetPlatform }}
+          path: build/${{ matrix.targetPlatform }}
