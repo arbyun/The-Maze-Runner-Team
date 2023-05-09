@@ -31,6 +31,7 @@ namespace Player
         public Vector2 deathRecoil;
         public float deathDelay;
         internal Action wasHurt;
+        internal bool isDead;
 
         public Vector2 attackUpRecoil;
         public Vector2 attackForwardRecoil;
@@ -350,7 +351,9 @@ namespace Player
 
             material.bounciness = 0;
             material.friction = 0;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+            isDead = true;
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
         /* ######################################################### */

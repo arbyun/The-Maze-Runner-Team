@@ -6,6 +6,20 @@ namespace Utilities.Test_Scripts
     class GameManager: MonoBehaviour
     {
         public GameObject level;
+        public bool IsBGLevel;
+        private RoughDoor _rdScript;
+
+        public void Awake()
+        {
+            _rdScript = FindObjectOfType<RoughDoor>();
+
+            if (IsBGLevel)
+            {
+                StartCoroutine(_rdScript.fadeIn());
+                var player = GameObject.FindWithTag("Player");
+                player.transform.position = _rdScript.transform.position;
+            }
+        }
 
         /*private void Awake()
         {

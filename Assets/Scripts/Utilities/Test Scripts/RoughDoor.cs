@@ -36,7 +36,7 @@ namespace Utilities.Test_Scripts
         private void Start()
         {
             _traps = FindObjectsOfType<Trap>();
-            _cvm = FindObjectOfType<CinemachineVirtualCamera>().gameObject.GetComponent<CamTest>().zoomActive;
+            _cvm = FindObjectOfType<CamTest>().zoomActive;
         }
 
         private void OnTriggerEnter2D(Collider2D other)
@@ -231,6 +231,11 @@ namespace Utilities.Test_Scripts
         {
             
             _fadePanel.gameObject.SetActive(true);
+            hideInteractText();
+            SceneManager.UnloadSceneAsync("HUD");
+            
+            CanvasGroup canvasGroup = _fadePanel.GetComponent<CanvasGroup>();
+            canvasGroup.alpha = 0f;
 
             Debug.Log("Fading out");
             // Fade out over 1 second
@@ -239,17 +244,18 @@ namespace Utilities.Test_Scripts
             {
                 Debug.Log("FaDING STILL");
                 float alpha = Mathf.Lerp(0f, 1f, elapsedTime / 1f);
-                _fadePanel.alpha = alpha;
+                canvasGroup.alpha = alpha;
                 elapsedTime += Time.deltaTime;
                 yield return null;
             }
 
             Debug.Log("Should've faded by now lol");
             // Set alpha to 1f
-            _fadePanel.alpha = 1f;
+            canvasGroup.alpha = 1f;
+            yield return new WaitForSeconds(3);
         }
 
-        private IEnumerator fadeIn()
+        internal IEnumerator fadeIn()
         {
             // Find fade panel in next scene
             Scene nextScene = SceneManager.GetSceneByName(nextSceneName);
