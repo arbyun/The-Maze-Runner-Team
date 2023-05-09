@@ -45,10 +45,10 @@ MonoBehaviour:
     overrideState: 1
     value: 1
   intensity:
-    overrideState: 0
+    overrideState: 1
     value: 2.5
   threshold:
-    overrideState: 0
+    overrideState: 1
     value: 0.45
   softKnee:
     overrideState: 0
@@ -63,7 +63,7 @@ MonoBehaviour:
     overrideState: 0
     value: 0
   color:
-    overrideState: 0
+    overrideState: 1
     value: {r: 0.35493988, g: 0.19410776, b: 0.76533914, a: 1}
   fastMode:
     overrideState: 0
@@ -102,7 +102,7 @@ MonoBehaviour:
     value: {x: 0.5, y: 0.5}
   intensity:
     overrideState: 1
-    value: 1
+    value: 0.331
   smoothness:
     overrideState: 0
     value: 0.2
@@ -227,7 +227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adb84e30e02715445aeb9959894e3b4d, type: 3}
   m_Name: ColorGrading
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   enabled:
     overrideState: 1
     value: 1
