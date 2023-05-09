@@ -1,0 +1,278 @@
+Using pre-set license
+Built from '2021.3/staging' branch; Version is '2021.3.16f1 (4016570cf34f) revision 4200023'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22621) 64bit Core' Language: 'pt' Physical Memory: 16231 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.3.16f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/vvito/Desktop/The-Maze-Runner-Team-build/The-Maze-Runner-Team-build1
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+63168
+Successfully changed project path to: C:/Users/vvito/Desktop/The-Maze-Runner-Team-build/The-Maze-Runner-Team-build1
+C:/Users/vvito/Desktop/The-Maze-Runner-Team-build/The-Maze-Runner-Team-build1
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [12180] Host "[IP] 192.168.1.73 [Port] 0 [Flags] 2 [Guid] 479674919 [EditorId] 479674919 [Version] 1048832 [Id] WindowsEditor(7,vitoria) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [12180] Host "[IP] 192.168.1.73 [Port] 0 [Flags] 2 [Guid] 479674919 [EditorId] 479674919 [Version] 1048832 [Id] WindowsEditor(7,vitoria) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+Refreshing native plugins compatible for Editor in 56.32 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.16f1 (4016570cf34f)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/vvito/Desktop/The-Maze-Runner-Team-build/The-Maze-Runner-Team-build1/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1660 Ti (ID=0x2191)
+    Vendor:   NVIDIA
+    VRAM:     5979 MB
+    Driver:   31.0.15.3179
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56784
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.005785 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 53.62 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.772 seconds
+Domain Reload Profiling:
+	ReloadAssembly (772ms)
+		BeginReloadAssembly (94ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (553ms)
+			LoadAssemblies (93ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (177ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (26ms)
+			SetupLoadedEditorAssemblies (292ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (8ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (54ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (166ms)
+				ProcessInitializeOnLoadMethodAttributes (63ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.006150 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 58.47 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.182 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1183ms)
+		BeginReloadAssembly (119ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (22ms)
+		EndReloadAssembly (940ms)
+			LoadAssemblies (84ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (258ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (62ms)
+			SetupLoadedEditorAssemblies (474ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (59ms)
+				BeforeProcessingInitializeOnLoad (92ms)
+				ProcessInitializeOnLoadAttributes (271ms)
+				ProcessInitializeOnLoadMethodAttributes (40ms)
+				AfterProcessingInitializeOnLoad (6ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.60 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2820 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 58 unused Assets / (1.3 MB). Loaded Objects now: 3269.
+Memory consumption went from 133.6 MB to 132.3 MB.
+Total: 4.528600 ms (FindLiveObjects: 0.244400 ms CreateObjectMapping: 0.184500 ms MarkObjects: 3.866400 ms  DeleteObjects: 0.232600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 575807.516853 seconds.
+  path: Assets/BUILD ONE ASSETS/Tileset/Background1_unity 1.png
+  artifactKey: Guid(b168cb567451c234fb46611e3672f59f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BUILD ONE ASSETS/Tileset/Background1_unity 1.png using Guid(b168cb567451c234fb46611e3672f59f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae23d76b2b7c420f09670262b95055d3') in 0.069628 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 51.693835 seconds.
+  path: Assets/BUILD ONE ASSETS/Tileset/backgroung_2unity.png
+  artifactKey: Guid(256825ba3cc92ca4b9489ef24f8f2aff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BUILD ONE ASSETS/Tileset/backgroung_2unity.png using Guid(256825ba3cc92ca4b9489ef24f8f2aff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee1eb1dd2c49c4289f0f4442fd352ade') in 0.056459 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 17.904042 seconds.
+  path: Assets/BUILD ONE ASSETS/Tileset/backgroung_2unity.png
+  artifactKey: Guid(256825ba3cc92ca4b9489ef24f8f2aff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BUILD ONE ASSETS/Tileset/backgroung_2unity.png using Guid(256825ba3cc92ca4b9489ef24f8f2aff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac262a6083f2236b280dbce2734c4383') in 0.012469 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 32.890444 seconds.
+  path: Assets/BUILD ONE ASSETS/Tileset/backgroung_2unity.png
+  artifactKey: Guid(256825ba3cc92ca4b9489ef24f8f2aff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BUILD ONE ASSETS/Tileset/backgroung_2unity.png using Guid(256825ba3cc92ca4b9489ef24f8f2aff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2434a5bc34861b802e4e57061f37084') in 0.021571 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 467.370549 seconds.
+  path: Assets/BUILD ONE ASSETS/Tileset/Background3unity.png
+  artifactKey: Guid(2fb1277add8650e4882b3d483a4f1dd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BUILD ONE ASSETS/Tileset/Background3unity.png using Guid(2fb1277add8650e4882b3d483a4f1dd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e5e95f0446f78a5121fe86c267ba466') in 0.020866 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 12.525568 seconds.
+  path: Assets/BUILD ONE ASSETS/Tileset/Background3unity.png
+  artifactKey: Guid(2fb1277add8650e4882b3d483a4f1dd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BUILD ONE ASSETS/Tileset/Background3unity.png using Guid(2fb1277add8650e4882b3d483a4f1dd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01e4d0439d3626aee5daaa79287e0bd3') in 0.010866 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 14.611344 seconds.
+  path: Assets/BUILD ONE ASSETS/Tileset/Background3unity.png
+  artifactKey: Guid(2fb1277add8650e4882b3d483a4f1dd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BUILD ONE ASSETS/Tileset/Background3unity.png using Guid(2fb1277add8650e4882b3d483a4f1dd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e94f39f9a48e33ebd37464a67c129bf2') in 0.060702 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 816.734215 seconds.
+  path: Assets/BUILD ONE ASSETS/Tileset/background_4unity.png
+  artifactKey: Guid(996fb02275029e843a6d67d198fb0129) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BUILD ONE ASSETS/Tileset/background_4unity.png using Guid(996fb02275029e843a6d67d198fb0129) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1bdfcf7bf4a798daea89af0ac388c676') in 0.044282 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 19.378860 seconds.
+  path: Assets/BUILD ONE ASSETS/Tileset/background_4unity.png
+  artifactKey: Guid(996fb02275029e843a6d67d198fb0129) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BUILD ONE ASSETS/Tileset/background_4unity.png using Guid(996fb02275029e843a6d67d198fb0129) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea845efa8f66c92e7eefb54cac812a78') in 0.011416 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.744392 seconds.
+  path: Assets/BUILD ONE ASSETS/Tileset/background_4unity.png
+  artifactKey: Guid(996fb02275029e843a6d67d198fb0129) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BUILD ONE ASSETS/Tileset/background_4unity.png using Guid(996fb02275029e843a6d67d198fb0129) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '184dc951a8513101fe459a453de387f8') in 0.049398 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 93.638522 seconds.
+  path: Assets/BUILD ONE ASSETS/Tileset/background_5unity.png
+  artifactKey: Guid(b082fdca2e4efb64ea68c6a81085e9ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BUILD ONE ASSETS/Tileset/background_5unity.png using Guid(b082fdca2e4efb64ea68c6a81085e9ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3aff95e12f5cd670e1b594849a49c8c3') in 0.022288 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 15.632722 seconds.
+  path: Assets/BUILD ONE ASSETS/Tileset/background_5unity.png
+  artifactKey: Guid(b082fdca2e4efb64ea68c6a81085e9ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BUILD ONE ASSETS/Tileset/background_5unity.png using Guid(b082fdca2e4efb64ea68c6a81085e9ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75c80fb0263697d1bc671430196dedb3') in 0.010485 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.192014 seconds.
+  path: Assets/BUILD ONE ASSETS/Tileset/background_5unity.png
+  artifactKey: Guid(b082fdca2e4efb64ea68c6a81085e9ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BUILD ONE ASSETS/Tileset/background_5unity.png using Guid(b082fdca2e4efb64ea68c6a81085e9ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82f48bb00d8adcab6fd9cf2ac24a741c') in 0.021268 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 18.315662 seconds.
+  path: Assets/BUILD ONE ASSETS/Tileset/background_5unity_Clareira.png
+  artifactKey: Guid(b082fdca2e4efb64ea68c6a81085e9ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BUILD ONE ASSETS/Tileset/background_5unity_Clareira.png using Guid(b082fdca2e4efb64ea68c6a81085e9ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a2e6af029777633fbae84dfc761fa91') in 0.016402 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.809446 seconds.
+  path: Assets/BUILD ONE ASSETS/Tileset/backgroung_2unity_lab.png
+  artifactKey: Guid(256825ba3cc92ca4b9489ef24f8f2aff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BUILD ONE ASSETS/Tileset/backgroung_2unity_lab.png using Guid(256825ba3cc92ca4b9489ef24f8f2aff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4575748a83f5cccbfd92bb8adfbf5179') in 0.021790 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 18.971471 seconds.
+  path: Assets/BUILD ONE ASSETS/Tileset/backgroung_2unity_Maze.png
+  artifactKey: Guid(256825ba3cc92ca4b9489ef24f8f2aff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BUILD ONE ASSETS/Tileset/backgroung_2unity_Maze.png using Guid(256825ba3cc92ca4b9489ef24f8f2aff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fb2a1dc5cb62834796c5a2a8ad4db52') in 0.022470 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.019295 seconds.
+  path: Assets/BUILD ONE ASSETS/Tileset/background_4unity_Lab.png
+  artifactKey: Guid(996fb02275029e843a6d67d198fb0129) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BUILD ONE ASSETS/Tileset/background_4unity_Lab.png using Guid(996fb02275029e843a6d67d198fb0129) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3306bccc5963eac8649f13a1b7c8e58f') in 0.026913 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.244004 seconds.
+  path: Assets/BUILD ONE ASSETS/Tileset/Background3unity_Maze.png
+  artifactKey: Guid(2fb1277add8650e4882b3d483a4f1dd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BUILD ONE ASSETS/Tileset/Background3unity_Maze.png using Guid(2fb1277add8650e4882b3d483a4f1dd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c792ec4c805695dd81c331b342f8186') in 0.053078 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.731106 seconds.
+  path: Assets/BUILD ONE ASSETS/Tileset/Background1_unity_Maze.png
+  artifactKey: Guid(aa02fd88d35cd1441ae7691a36be3738) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BUILD ONE ASSETS/Tileset/Background1_unity_Maze.png using Guid(aa02fd88d35cd1441ae7691a36be3738) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6355345c47560d330bb92ecee088f6e9') in 0.073250 seconds 
