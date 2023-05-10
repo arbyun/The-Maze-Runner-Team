@@ -8,6 +8,7 @@
 [![CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by-nc-sa/4.0/)
 
 ![Progress](https://progress-bar.dev/21/?title=progress)
+[![Build project](https://github.com/arbyun/The-Maze-Runner-Team/actions/workflows/main.yml/badge.svg?branch=version1)](https://github.com/arbyun/The-Maze-Runner-Team/actions/workflows/main.yml)
 
 *Team platformer/sidescroller project for University Lusófona*
 
