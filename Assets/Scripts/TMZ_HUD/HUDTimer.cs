@@ -11,7 +11,7 @@ namespace TMZ_HUD
 
         private void Start()
         {
-            timerText = GetComponent<TMP_Text>();
+            //timerText = GetComponent<TMP_Text>();
             timer = GetComponent<Timer>();
         }
 
