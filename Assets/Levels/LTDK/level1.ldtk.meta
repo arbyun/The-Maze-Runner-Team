@@ -1,0 +1,53 @@
+fileFormatVersion: 2
+guid: 4cc581fefdd35664bbeb74a21d3501df
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: aaa16bfc62c086f4fb45da87b6acf9b1, type: 3}
+  _reimportOnDependencyChange: 1
+  _jsonFile: {fileID: -164016180542632921, guid: 4cc581fefdd35664bbeb74a21d3501df,
+    type: 3}
+  _pixelsPerUnit: 36
+  _atlas: {fileID: 4343727234628468602, guid: 45aa9bdabf90dad449747505a0e0d8d3, type: 2}
+  _customLevelPrefab: {instanceID: 0}
+  _deparentInRuntime: 0
+  _intGridValueColorsVisible: 0
+  _useCompositeCollider: 1
+  _createBackgroundColor: 1
+  _createLevelBoundsTrigger: 0
+  _intGridValues: []
+  _entities:
+  - _key: Spitter
+    _asset: {fileID: 3300419883422892898, guid: 7785e96e5cf5f4d06b7ee6b8cefb9158,
+      type: 3}
+  - _key: Patroller
+    _asset: {fileID: 3720960542313605642, guid: aa1799629b988461caedcaae1c13d103,
+      type: 3}
+  - _key: Follower
+    _asset: {fileID: 8091120411074525379, guid: 31c7fae3fcfbf6546b64068f500d4bfe,
+      type: 3}
+  - _key: Goal
+    _asset: {fileID: 8823934007270059431, guid: 348e01e5a9cf44f478f8f63c782edea7,
+      type: 3}
+  - _key: Entry
+    _asset: {fileID: 5158969438636376386, guid: e3521b6b37ef97949983c741fbe88bb5,
+      type: 3}
+  - _key: Exit
+    _asset: {fileID: 7178913913684298322, guid: f923f033883b2aa44851e7c28e94e952,
+      type: 3}
+  - _key: Guide
+    _asset: {fileID: 5852523251096016534, guid: 5e709fe2f08589748a2e47cfa11eb3ae,
+      type: 3}
+  - _key: Treasure
+    _asset: {fileID: 3458063520750264950, guid: 7ee891111576ec547b44618b3e1c7e79,
+      type: 3}
+  - _key: Player
+    _asset: {fileID: 8691440337859723081, guid: 74668ad9a3e2f5d4990bd7bfc40afea6,
+      type: 3}
+  _enumGenerate: 0
+  _enumPath: 
+  _enumNamespace: 

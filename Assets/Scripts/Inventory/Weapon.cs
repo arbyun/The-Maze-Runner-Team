@@ -18,7 +18,7 @@ namespace Inventory
 
         private PlayerController _owner;
 
-        private void OnEnable()
+        internal void OnEnable()
         {
             gameObject.GetComponent<SpriteRenderer>().sprite = itemData.itemInGameImage;
             itemData.itemGameObject = gameObject;

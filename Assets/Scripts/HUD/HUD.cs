@@ -9,6 +9,7 @@ public class HUD : MonoBehaviour
 {
     public GameObject pauseMenu;
     public GameObject gameOver;
+    public GameObject inventory;
     private PlayerController pc;
 
     private void Start()
@@ -22,6 +23,11 @@ public class HUD : MonoBehaviour
         {
             pauseMenu.SetActive(!pauseMenu.activeSelf);
             Time.timeScale = pauseMenu.activeSelf ? 0 : 1;
+        }
+        
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            inventory.SetActive(!inventory.activeSelf);
         }
 
         if (pc.isDead)

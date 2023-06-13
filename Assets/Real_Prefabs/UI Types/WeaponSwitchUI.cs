@@ -1,4 +1,5 @@
-﻿using Player;
+﻿using Inventory;
+using Player;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,8 +10,8 @@ namespace Real_Prefabs.UI_Types
         private Image _slot1Image;
         private Image _slot2Image;
 
-        private static GameObject _currentWeapon;
-        private static GameObject _offhandWeapon;
+        private static Weapon _currentWeapon;
+        private static Weapon _offhandWeapon;
         //private Sprite _sprite;
         //private Sprite _sprite1;
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using Inventory;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Utilities;
@@ -65,8 +66,8 @@ namespace Player
         private BoxCollider2D _boxCollider;
         private TrailRenderer _trailRenderer;
 
-        [SerializeField] internal GameObject equippedWeapon;
-        [SerializeField] internal GameObject offhandWeapon;
+        [SerializeField] internal Weapon equippedWeapon;
+        [SerializeField] internal Weapon offhandWeapon;
         
         public delegate void MethodToOverrideHandler();
         public event MethodToOverrideHandler MethodToOverrideEvent;
