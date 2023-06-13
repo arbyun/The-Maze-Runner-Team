@@ -44,6 +44,16 @@ Each level has different types of enemies that the player must defeat or avoid. 
 
 The game also features a range of unique mechanics, including the ability to climb walls, jump heights, dash, grapple the walls, and more. The game, furthermore, features enemies that are in the background and can take a special interest in the player and jump to the foreground, adding an extra layer of surprise to the game.
 
+## Characters and Ememnies
+
+In this game the Player will have to face 3 types of diferent enemies.
+
+| Enemies | Description |
+|---------|-------------|
+| Follower | Stands still until the player passes it then follows the player for a while |
+| Patroller | Patrols an area keeping watch for the player and attacking on sight |
+| Spitter | Flying enemy that spits at the player whenever he is in range |
+
 ## Art Style and Graphics
 
 *The Maze Runner: Gladers' Escape* is drawn in a charming pixel art style and developed in the Unity Engine. The game's visual style is inspired by The Maze Runner movies' looks and is designed to appeal to fans of the series.
