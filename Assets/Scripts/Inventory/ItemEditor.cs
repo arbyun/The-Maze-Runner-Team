@@ -1,21 +1,19 @@
-﻿using UnityEditor;
+﻿using Inventory;
+using UnityEditor;
 using UnityEngine;
 
-namespace Inventory
+[CustomEditor(typeof(Item))]
+public class ItemEditor : Editor
 {
-    [CustomEditor(typeof(Item))]
-    public class ItemEditor : Editor
+    public override void OnInspectorGUI()
     {
-        public override void OnInspectorGUI()
+        base.OnInspectorGUI();
+        var script = (Item)target;
+
+        if(GUILayout.Button("Generate Item", GUILayout.Height(20)))
         {
-            base.OnInspectorGUI();
-            var script = (Item)target;
- 
-            if(GUILayout.Button("Generate Item", GUILayout.Height(20)))
-            {
-                script.Validate();
-            }
-         
+            script.Validate();
         }
+     
     }
 }
