@@ -61,7 +61,7 @@ namespace Utilities.Test_Scripts
 
         private void Update()
         {
-            if (_canInteract && _canLoadScene && Input.GetKeyDown(KeyCode.I))
+            if (_canInteract && _canLoadScene && Input.GetKeyDown(KeyCode.X))
             {
                 Debug.Log("Colliding");
                 //_triggerChildren.trigger();

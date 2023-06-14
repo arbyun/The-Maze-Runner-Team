@@ -2646,7 +2646,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 2053409540}
   gameOver: {fileID: 385278493}
-  inventory: {fileID: 0}
+  inventory: {fileID: 188526982}
 --- !u!114 &236869901
 MonoBehaviour:
   m_ObjectHideFlags: 0

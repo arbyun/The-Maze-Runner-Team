@@ -4,7 +4,8 @@ namespace Inventory
 {
     public class ItemManager : MonoBehaviour
     {
-        private InventoryInstance _inventory;
+        public static ItemManager Instance;
+        internal InventoryInstance inventory;
         [SerializeField] private UIInventory uiInventory;
 
         private void Awake()

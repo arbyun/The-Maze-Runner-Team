@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class NextLevel : MonoBehaviour
 {
-    private string _nextScene;
+    public string _nextScene;
     
     private void OnCollisionEnter2D(Collision2D collision)
     {

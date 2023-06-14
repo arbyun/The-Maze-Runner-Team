@@ -41,10 +41,10 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
     path: Assets/Version1_newLevels/Level_1.unity
     guid: 8f669e960f567bc44b9c12823531b215
-  - enabled: 1
+  - enabled: 0
     path: Assets/Version1_newLevels/Level_2.unity
     guid: 3cb0aec7971df524da5fab15c56ee142
   m_configObjects: {}
