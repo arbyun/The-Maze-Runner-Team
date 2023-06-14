@@ -11,8 +11,8 @@ namespace Inventory
         private void Awake()
         {
             DontDestroyOnLoad(gameObject);
-            _inventory = new InventoryInstance();
-            uiInventory.SetInventory(_inventory);
+            inventory = new InventoryInstance();
+            uiInventory.SetInventory(inventory);
         }
     }
 }
