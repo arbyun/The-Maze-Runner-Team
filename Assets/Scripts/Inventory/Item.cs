@@ -17,20 +17,21 @@ namespace Inventory
         public bool equippable;
         public Guid id = new Guid();
         public ItemType[] types; [Tooltip("Choose only two at max.")]
+
         internal void Validate()
         {
             if (!itemGameObject)
             {
                 if (!Directory.Exists("Assets/Prefabs"))
                     AssetDatabase.CreateFolder("Assets", "Prefabs");
-                
+
                 string localPath = "Assets/Prefabs/" + itemName + ".prefab";
 
                 localPath = AssetDatabase.GenerateUniqueAssetPath(localPath);
 
                 bool tempWeapon = false;
                 bool tempConsumable = false;
-                
+
                 GameObject gm = new GameObject($"{itemName}");
 
                 if (types.Length > 1)
@@ -57,9 +58,9 @@ namespace Inventory
                 {
                     gm.AddComponent<Weapon>();
                 }
-                
+
                 PrefabUtility.SaveAsPrefabAsset(gm, localPath, out bool idk);
-                
+
                 itemGameObject = gm;
             }
         }
