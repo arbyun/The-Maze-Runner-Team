@@ -124,3 +124,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 264770b88bd0cf74bbea3599573560e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lootTable:
+  - {fileID: 11400000, guid: 90d9719811b2ed246ba95c62d106071a, type: 2}
+  - {fileID: 11400000, guid: 6a70f5af88af31044bbe53b3a88336a1, type: 2}
+  - {fileID: 11400000, guid: 0ff757306d8e2d74ca723e8b2c9e3753, type: 2}
+  - {fileID: 11400000, guid: bae85be9bca686e46913e9c6ee47430c, type: 2}
+  - {fileID: 11400000, guid: e4dac0d74a3be7742a74bc2c92766619, type: 2}
+  - {fileID: 11400000, guid: b57fb666c92fada4e8f709706deea800, type: 2}
+  interactionText: {fileID: 0}
+  resultText: {fileID: 0}

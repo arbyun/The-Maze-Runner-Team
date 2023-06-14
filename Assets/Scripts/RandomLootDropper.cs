@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -9,14 +10,16 @@ public class RandomLootDropper : MonoBehaviour
 {
     private InventoryInstance _inventory;
     public List<Item> lootTable;
-    public TextMeshProUGUI interactionText;
-    public TextMeshProUGUI resultText;
+    private Text interactionText;
+    private Text resultText;
 
     private bool isPlayerInside;
 
     private void Awake() 
     {
-        _inventory = ItemManager.Instance.inventory;
+        _inventory = new InventoryInstance();
+        interactionText = gameObject.GetComponentInChildren<Text>();
+        resultText = gameObject.GetComponentInChildren<Text>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -59,7 +62,7 @@ public class RandomLootDropper : MonoBehaviour
         return lootTable[randomIndex].itemName;
     }
 
-    private IEnumerator FadeOut(TextMeshProUGUI text)
+    private IEnumerator FadeOut(Text text)
     {
         Color startColor = text.color;
         Color endColor = new Color(startColor.r, startColor.g, startColor.b, 0f);
