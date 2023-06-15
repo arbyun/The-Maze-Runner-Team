@@ -320,7 +320,7 @@ SpriteRenderer:
   m_Size: {x: 2.14, y: 1.03}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &8691381136982886103
@@ -404,7 +404,7 @@ SpriteRenderer:
   m_Size: {x: 2.14, y: 1.03}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &8691410754779132801
@@ -488,7 +488,7 @@ SpriteRenderer:
   m_Size: {x: 2.14, y: 1.03}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &8691440337859723081
@@ -584,7 +584,7 @@ SpriteRenderer:
   m_Size: {x: 0.66, y: 1.32}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &8776099834944549987
@@ -666,13 +666,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 769e9f60be5268c4389c41308ffe43f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  jumpSpeed: 7
+  moveSpeed: 10
+  jumpSpeed: 12
   jumpLeft: 0
   climbJumpForce: {x: 8, y: 10}
   fallSpeed: 5
-  sprintSpeed: 10
-  sprintTime: 0.15
+  sprintSpeed: 15
+  sprintTime: 1.5
   sprintInterval: 1
   sprintDirection: {x: 0, y: 0}
   attackInterval: 0.3
@@ -690,6 +690,8 @@ MonoBehaviour:
   attackForwardEffect: {fileID: 8691381136982886103}
   attackDownEffect: {fileID: 8691410754779132801}
   testDamage: 116
+  equippedWeapon: {fileID: 0}
+  offhandWeapon: {fileID: 0}
 --- !u!96 &8689974846847104999
 TrailRenderer:
   serializedVersion: 2
